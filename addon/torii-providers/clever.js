@@ -1,6 +1,5 @@
 import Oauth2 from 'torii/providers/oauth2-code';
 import { configurable } from 'torii/configuration';
-import { computed } from '@ember/object';
 
 /**
  * This class implements authentication against Clever Instant Login using the
@@ -9,5 +8,17 @@ import { computed } from '@ember/object';
 export default Oauth2.extend({
   name: 'clever',
 
-  baseUrl: 'https://clever.com/oauth/authorize'
+  init() {
+    this._super(...arguments);
+
+    this.setProperties({
+      requiredUrlParams: ['client_id', 'redirect_uri', 'response_type'],
+      optionalUrlParams: ['district_id'],
+      responseParams: ['code']
+    });
+  },
+
+  baseUrl: 'https://clever.com/oauth/authorize',
+  districtId: configurable('districtId'),
+  responseType: configurable('responseType', 'code')
 });
