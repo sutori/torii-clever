@@ -1,12 +1,13 @@
 torii-clever
 ==============================================================================
 
-[Short description of the addon.]
+This is a [Clever Instant Login](https://dev.clever.com/docs/identity-api) provider for [Torii](https://github.com/Vestorly/torii).
 
 Installation
 ------------------------------------------------------------------------------
 
 ```
+ember install torii
 ember install torii-clever
 ```
 
@@ -14,7 +15,35 @@ ember install torii-clever
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+Edit `/config/environment.js` and add your Torii provider configuration:
+
+```javascript
+module.exports = function(environment) {
+  var ENV = {
+
+  // ... other ENV config stuff here
+
+  ENV['torii'] = {
+    providers: {
+      'clever': {
+        clientId: 'Clever client ID',
+        redirectUri: 'http://localhost:4200/torii/redirect.html',
+        districtId: 'Clever district ID'
+      }
+    }
+  };
+
+  return ENV;
+};
+```
+
+Options that can be configured:
+
+| Option | Required | Description |
+|--------|----------|-------------|
+| clientId | x | Client ID of your app |
+| redirectUri | x | Redirect URI of the app for the authentication response |
+| districtId | | District ID |
 
 
 Contributing
