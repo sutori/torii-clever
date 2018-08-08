@@ -19,9 +19,7 @@ Edit `/config/environment.js` and add your Torii provider configuration:
 
 ```javascript
 module.exports = function(environment) {
-  var ENV = {
-
-  // ... other ENV config stuff here
+  // ...
 
   ENV['torii'] = {
     providers: {
@@ -33,7 +31,7 @@ module.exports = function(environment) {
     }
   };
 
-  return ENV;
+  // ...
 };
 ```
 
