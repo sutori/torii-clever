@@ -77,3 +77,7 @@ License
 ------------------------------------------------------------------------------
 
 This project is licensed under the [MIT License](LICENSE.md).
+
+----
+
+Created and maintained by [Yoran Brondsema](https://github.com/YoranBrondsema) from [Sutori](https://www.sutori.com).
