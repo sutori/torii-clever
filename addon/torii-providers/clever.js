@@ -19,6 +19,6 @@ export default Oauth2.extend({
   },
 
   baseUrl: 'https://clever.com/oauth/authorize',
-  districtId: configurable('districtId'),
+  districtId: configurable('districtId', ''),
   responseType: configurable('responseType', 'code')
 });
