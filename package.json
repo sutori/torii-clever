@@ -54,7 +54,8 @@
   },
   "resolutions": {
     "js-yaml": ">=3.13.1",
-    "jquery": ">=3.4.0"
+    "jquery": ">=3.4.0",
+    "morgan": ">=1.9.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
