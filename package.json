@@ -1,6 +1,6 @@
 {
   "name": "torii-clever",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Torii provider for Clever Instant Login.",
   "keywords": [
     "ember-addon",
